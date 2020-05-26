@@ -1,13 +1,33 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
 
+import Mainlayout from "../components/mainlayout";
+import Defaultpage from "../components/defaultpage";
+
+const Index = ()=> (
+
+
+     <Defaultpage/>
+
+
+
+)
+Index.getLayout = page => <Mainlayout>{page}</Mainlayout>
+export default  Index;
+
+
+/*
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
+    export default function Home({ allPostsData }) {
+
+    return (
+        <div>
+            <h1>dsds</h1>
+        </div>
+    )
+
+
+}
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -46,3 +66,4 @@ export async function getStaticProps() {
     }
   }
 }
+*/

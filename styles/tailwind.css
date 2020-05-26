@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* { margin: 0; padding: 0; }
+body {
+    height: 100vh;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: auto;
+}
+#__next {
+
+    height: 100vh;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+
+
+}
+.principal{
+
+
+}
