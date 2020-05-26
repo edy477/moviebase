@@ -24,13 +24,9 @@ function movielist({movies}) {
 
                 }
      </ul>*/
-    /*async function  fetchData () {
-        const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
-        const rest =await moviedb.discoverMovie('sort_by=popularity.desc');
-        console.log(rest)
-        return rest
+    /*a
     }
-  //  const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+  //  c
     const movies =  fetchData();
     console.log(movies)
 
@@ -57,7 +53,7 @@ export async function getStaticProps() {
 }*/
 export async function getStaticProps() {
 
-    const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    const moviedb = new MovieDb(process.env.customKey);
     const res =await moviedb.discoverMovie('sort_by=popularity.desc');
    const movies = res['results']
     console.log(movies)

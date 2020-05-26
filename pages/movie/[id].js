@@ -11,7 +11,7 @@ const Movieid = ({data,info,credits,similar})=> {
    const router =  useRouter();
    //console.log(router.query.id)
     console.log(info)
-    //const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    //
     // const res =await moviedb.movieImages('movie_id='+id.toString());
     /*moviedb.movieImages({ id : '419704' }).then(res => {
         console.log(res)
@@ -88,7 +88,7 @@ const Movieid = ({data,info,credits,similar})=> {
 Movieid.getInitialProps = async ({query}) => {
     const _id = query.id;
 
-    const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    const moviedb = new MovieDb(process.env.customKey);
    // const res =await moviedb.movieImages('movie_id='+id.toString());
     const res =await moviedb.movieImages({id:_id.toString() });
     const  res2 = await moviedb.movieInfo({id:_id.toString() });

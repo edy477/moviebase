@@ -24,7 +24,7 @@ const Listmovies = ({data}) => {
 Listmovies.getInitialProps = async ({query}) => {
     const {genre} = query;
 
-    const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    const moviedb = new MovieDb(process.env.customKey);
     const res =await moviedb.discoverMovie('sort_by=popularity.desc&with_genres='+genre);
     const data = res;
 
@@ -65,7 +65,7 @@ export async function getInitialProps({ query }) {
 
 
     const  {genre } = query;
-    const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    const moviedb = new MovieDb('');
     const res =await moviedb.discoverMovie('sort_by=popularity.desc&with_genres='+genre.toString());
  const movies = res
 

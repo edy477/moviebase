@@ -12,7 +12,7 @@ console.log(genre)
 }
 export async function getInitialProps({ query }) {
     const  {genre } = query;
-    const moviedb = new MovieDb('9b30eddad32975fb2bec8125c8b2608b');
+    const moviedb = new MovieDb(process.env.customKey);
     const res =await moviedb.discoverMovie('sort_by=popularity.desc');
     const movies = res['results']
     console.log(movies)
